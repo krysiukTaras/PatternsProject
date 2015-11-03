@@ -1,7 +1,7 @@
 package com.epam.com.patternsproject.behavioral.mediator;
 
 /**
- * Created by taras on 03.11.15.
+ * Created by taras
  */
 public class Boing implements Colleague {
 
