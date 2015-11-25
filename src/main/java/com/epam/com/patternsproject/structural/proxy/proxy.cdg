@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.epam.com.patternsproject.structural.proxy">
+  <ClassDiagramComponents>
+    <Class name="ProxyImage" package="com.epam.com.patternsproject.structural.proxy" visibility="public" xPosition="630.0" yPosition="343.0">
+      <Fields>
+        <Field name="image" type="RealImage" visibility="private"/>
+        <Field name="filename" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="filename"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="displayImage" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RealImage" package="com.epam.com.patternsproject.structural.proxy" visibility="public" xPosition="1053.0" yPosition="343.0">
+      <Fields>
+        <Field name="filename" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="filename"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="loadImageFromDisk" returnType="void" visibility="private"/>
+        <Method name="displayImage" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Image" package="com.epam.com.patternsproject.structural.proxy" visibility="public" xPosition="873.0" yPosition="662.0">
+      <Methods>
+        <Method name="displayImage" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.structural.proxy.RealImage" target="com.epam.com.patternsproject.structural.proxy.Image"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.structural.proxy.ProxyImage" target="com.epam.com.patternsproject.structural.proxy.Image"/>
+    <HasRelation name="image" source="com.epam.com.patternsproject.structural.proxy.ProxyImage" target="com.epam.com.patternsproject.structural.proxy.RealImage" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

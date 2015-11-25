@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="bridge">
+  <ClassDiagramComponents>
+    <Interface name="TV" package="" visibility="public" xPosition="487.0" yPosition="189.0">
+      <Methods/>
+    </Interface>
+    <Class name="LG" package="" visibility="public" xPosition="185.0" yPosition="72.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Samsung" package="" visibility="public" xPosition="185.0" yPosition="189.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Sony" package="" visibility="public" xPosition="185.0" yPosition="317.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="RemoteTVControl" package="" visibility="public" isAbstract="true" xPosition="843.0" yPosition="179.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="PhoneRemoteControl" package="" visibility="public" xPosition="1186.0" yPosition="81.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Client" package="" visibility="public" xPosition="843.0" yPosition="568.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="PhoneRemoteControl" target="RemoteTVControl"/>
+    <UseRelation name="" source="Client" target="RemoteTVControl" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Sony" target="TV"/>
+    <UseRelation name="" source="RemoteTVControl" target="TV" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="LG" target="TV"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="Samsung" target="TV"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

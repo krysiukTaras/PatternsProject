@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.epam.com.patternsproject.behavioral.templatemethod">
+  <ClassDiagramComponents>
+    <Class name="Basketball" package="com.epam.com.patternsproject.behavioral.templatemethod" visibility="public" xPosition="493.0" yPosition="412.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="initGame" returnType="void" visibility="package"/>
+        <Method name="startGame" returnType="void" visibility="package"/>
+        <Method name="endGame" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Football" package="com.epam.com.patternsproject.behavioral.templatemethod" visibility="public" xPosition="493.0" yPosition="56.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="initGame" returnType="void" visibility="package"/>
+        <Method name="startGame" returnType="void" visibility="package"/>
+        <Method name="endGame" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Game" package="com.epam.com.patternsproject.behavioral.templatemethod" visibility="public" isAbstract="true" xPosition="934.0" yPosition="182.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="initGame" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="startGame" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="endGame" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="play" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="com.epam.com.patternsproject.behavioral.templatemethod.Basketball" target="com.epam.com.patternsproject.behavioral.templatemethod.Game"/>
+    <IsRelation name="is" source="com.epam.com.patternsproject.behavioral.templatemethod.Football" target="com.epam.com.patternsproject.behavioral.templatemethod.Game"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

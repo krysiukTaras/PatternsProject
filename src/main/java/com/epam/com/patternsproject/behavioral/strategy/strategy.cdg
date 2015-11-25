@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.epam.com.patternsproject.behavioral.strategy">
+  <ClassDiagramComponents>
+    <Class name="BubbleSort" package="com.epam.com.patternsproject.behavioral.strategy" visibility="public" xPosition="532.0" yPosition="100.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="void" visibility="public">
+          <Argument type="int[]" name="numbers"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Context" package="com.epam.com.patternsproject.behavioral.strategy" visibility="public" xPosition="771.0" yPosition="542.0">
+      <Fields>
+        <Field name="strategy" type="Strategy" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Strategy" name="strategy"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="sort" returnType="void" visibility="public">
+          <Argument type="int[]" name="input"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="InsertionSort" package="com.epam.com.patternsproject.behavioral.strategy" visibility="public" xPosition="777.0" yPosition="100.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="void" visibility="public">
+          <Argument type="int[]" name="numbers"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="QuickSort" package="com.epam.com.patternsproject.behavioral.strategy" visibility="public" xPosition="1028.0" yPosition="100.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sort" returnType="void" visibility="public">
+          <Argument type="int[]" name="numbers"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Strategy" package="com.epam.com.patternsproject.behavioral.strategy" visibility="public" xPosition="777.0" yPosition="379.0">
+      <Methods>
+        <Method name="sort" returnType="void" visibility="public">
+          <Argument type="int[]" name="numbers"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.strategy.QuickSort" target="com.epam.com.patternsproject.behavioral.strategy.Strategy"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.strategy.InsertionSort" target="com.epam.com.patternsproject.behavioral.strategy.Strategy"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.strategy.BubbleSort" target="com.epam.com.patternsproject.behavioral.strategy.Strategy"/>
+    <HasRelation name="strategy" source="com.epam.com.patternsproject.behavioral.strategy.Context" target="com.epam.com.patternsproject.behavioral.strategy.Strategy" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.epam.com.patternsproject.structural.decorator">
+  <ClassDiagramComponents>
+    <Class name="BorderDecorator" package="com.epam.com.patternsproject.structural.decorator" visibility="public" xPosition="43.0" yPosition="111.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Widget" name="w"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Decorator" package="com.epam.com.patternsproject.structural.decorator" visibility="public" isAbstract="true" xPosition="182.0" yPosition="397.0">
+      <Fields>
+        <Field name="wid" type="Widget" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Widget" name="w"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ScrollDecorator" package="com.epam.com.patternsproject.structural.decorator" visibility="public" xPosition="278.0" yPosition="111.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Widget" name="w"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TextField" package="com.epam.com.patternsproject.structural.decorator" visibility="public" xPosition="581.0" yPosition="121.0">
+      <Fields>
+        <Field name="width" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="w"/>
+          <Argument type="int" name="h"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="draw" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Widget" package="com.epam.com.patternsproject.structural.decorator" visibility="public" xPosition="581.0" yPosition="430.0">
+      <Methods>
+        <Method name="draw" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="com.epam.com.patternsproject.structural.decorator.BorderDecorator" target="com.epam.com.patternsproject.structural.decorator.Decorator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.structural.decorator.TextField" target="com.epam.com.patternsproject.structural.decorator.Widget"/>
+    <HasRelation name="wid" source="com.epam.com.patternsproject.structural.decorator.Decorator" target="com.epam.com.patternsproject.structural.decorator.Widget" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.epam.com.patternsproject.structural.decorator.ScrollDecorator" target="com.epam.com.patternsproject.structural.decorator.Decorator"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.structural.decorator.Decorator" target="com.epam.com.patternsproject.structural.decorator.Widget"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

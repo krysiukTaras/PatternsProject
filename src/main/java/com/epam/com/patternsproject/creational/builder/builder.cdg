@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.epam.com.patternsproject.creational.builder">
+  <ClassDiagramComponents>
+    <Class name="Barman" package="com.epam.com.patternsproject.creational.builder" visibility="public" xPosition="101.0" yPosition="505.0">
+      <Fields>
+        <Field name="coctailBuilder" type="CoctailBuilder" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setCoctailBuilder" returnType="void" visibility="public">
+          <Argument type="CoctailBuilder" name="coctailBuilder"/>
+        </Method>
+        <Method name="getCoctail" returnType="Coctail" visibility="public"/>
+        <Method name="createCoctail" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BloodyMaryBuilder" package="com.epam.com.patternsproject.creational.builder" visibility="public" xPosition="368.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="buildAlcohol" returnType="void" visibility="public"/>
+        <Method name="buildJuice" returnType="void" visibility="public"/>
+        <Method name="buildIngridients" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Coctail" package="com.epam.com.patternsproject.creational.builder" visibility="public" xPosition="933.0" yPosition="252.0">
+      <Fields>
+        <Field name="alcohol" type="String" visibility="private"/>
+        <Field name="juice" type="String" visibility="private"/>
+        <Field name="ingridients" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setAlcohol" returnType="void" visibility="public">
+          <Argument type="String" name="alcohol"/>
+        </Method>
+        <Method name="setJuice" returnType="void" visibility="public">
+          <Argument type="String" name="juice"/>
+        </Method>
+        <Method name="setIngridients" returnType="void" visibility="public">
+          <Argument type="String" name="ingridients"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CoctailBuilder" package="com.epam.com.patternsproject.creational.builder" visibility="public" isAbstract="true" xPosition="563.0" yPosition="252.0">
+      <Fields>
+        <Field name="coctail" type="Coctail" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCoctail" returnType="Coctail" visibility="public"/>
+        <Method name="createNewCoctail" returnType="void" visibility="public"/>
+        <Method name="buildAlcohol" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="buildJuice" returnType="void" visibility="public" isAbstract="true"/>
+        <Method name="buildIngridients" returnType="void" visibility="public" isAbstract="true"/>
+      </Methods>
+    </Class>
+    <Class name="MojitoBuilder" package="com.epam.com.patternsproject.creational.builder" visibility="public" xPosition="754.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="buildAlcohol" returnType="void" visibility="public"/>
+        <Method name="buildJuice" returnType="void" visibility="public"/>
+        <Method name="buildIngridients" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="com.epam.com.patternsproject.creational.builder.Barman" target="com.epam.com.patternsproject.creational.builder.Coctail" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="coctail" source="com.epam.com.patternsproject.creational.builder.CoctailBuilder" target="com.epam.com.patternsproject.creational.builder.Coctail" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="com.epam.com.patternsproject.creational.builder.MojitoBuilder" target="com.epam.com.patternsproject.creational.builder.CoctailBuilder"/>
+    <IsRelation name="is" source="com.epam.com.patternsproject.creational.builder.BloodyMaryBuilder" target="com.epam.com.patternsproject.creational.builder.CoctailBuilder"/>
+    <UseRelation source="com.epam.com.patternsproject.creational.builder.Barman" target="com.epam.com.patternsproject.creational.builder.CoctailBuilder" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="coctailBuilder" source="com.epam.com.patternsproject.creational.builder.Barman" target="com.epam.com.patternsproject.creational.builder.CoctailBuilder" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.epam.com.patternsproject.creational.builder.CoctailBuilder" target="com.epam.com.patternsproject.creational.builder.Coctail" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

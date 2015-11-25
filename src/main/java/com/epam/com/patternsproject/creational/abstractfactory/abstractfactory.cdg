@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="abstractfactory">
+  <ClassDiagramComponents>
+    <Interface name="AbstractFactory" package="" visibility="public" xPosition="501.0" yPosition="86.0">
+      <Methods>
+        <Method name="getContent" returnType="Content" visibility="public"/>
+        <Method name="getImages" returnType="Images" visibility="public"/>
+        <Method name="getLocale" returnType="Locale" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Class name="UAFactoryImpl" package="" visibility="public" xPosition="118.0" yPosition="234.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getContent" returnType="Content" visibility="public"/>
+        <Method name="getImages" returnType="Images" visibility="public"/>
+        <Method name="getLocale" returnType="Locale" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="USAFactoryImpl" package="" visibility="public" xPosition="887.0" yPosition="224.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getContent" returnType="Content" visibility="public"/>
+        <Method name="getImages" returnType="Images" visibility="public"/>
+        <Method name="getLocale" returnType="Locale" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Locale" package="" visibility="public" xPosition="90.0" yPosition="745.0">
+      <Methods/>
+    </Interface>
+    <Interface name="Images" package="" visibility="public" xPosition="488.0" yPosition="745.0">
+      <Methods/>
+    </Interface>
+    <Interface name="Content" package="" visibility="public" xPosition="887.0" yPosition="745.0">
+      <Methods/>
+    </Interface>
+    <Class name="UALocale" package="" visibility="public" xPosition="10.0" yPosition="585.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="USALocale" package="" visibility="public" xPosition="155.0" yPosition="585.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="UAImages" package="" visibility="public" xPosition="408.0" yPosition="585.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="USAImages" package="" visibility="public" xPosition="588.0" yPosition="585.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="UAContent" package="" visibility="public" xPosition="782.0" yPosition="585.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="USAContent" package="" visibility="public" xPosition="1007.0" yPosition="585.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="USAContent" target="Content"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="UALocale" target="Locale"/>
+    <UseRelation name="" source="USAFactoryImpl" target="USALocale" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="UAFactoryImpl" target="UAContent" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="UAImages" target="Images"/>
+    <UseRelation name="" source="USAFactoryImpl" target="USAImages" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="UAFactoryImpl" target="AbstractFactory"/>
+    <UseRelation name="" source="UAFactoryImpl" target="UAImages" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="UAContent" target="Content"/>
+    <UseRelation name="" source="USAFactoryImpl" target="USAContent" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="USAFactoryImpl" target="AbstractFactory"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="USAImages" target="Images"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="USALocale" target="Locale"/>
+    <UseRelation name="" source="UAFactoryImpl" target="UALocale" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

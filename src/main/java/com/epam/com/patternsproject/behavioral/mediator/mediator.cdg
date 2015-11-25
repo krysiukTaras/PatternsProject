@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.epam.com.patternsproject.behavioral.mediator">
+  <ClassDiagramComponents>
+    <Class name="Boing" package="com.epam.com.patternsproject.behavioral.mediator" visibility="public" xPosition="75.0" yPosition="34.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="recive" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlTower" package="com.epam.com.patternsproject.behavioral.mediator" visibility="public" xPosition="75.0" yPosition="630.0">
+      <Fields>
+        <Field name="colleagueList" type="ArrayList&lt;Colleague&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="addColleague" returnType="void" visibility="public">
+          <Argument type="Colleague" name="colleague"/>
+        </Method>
+        <Method name="send" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+          <Argument type="Colleague" name="colleagueSender"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Helicopter" package="com.epam.com.patternsproject.behavioral.mediator" visibility="public" xPosition="298.0" yPosition="34.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="recive" returnType="void" visibility="public">
+          <Argument type="String" name="message"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Colleague" package="com.epam.com.patternsproject.behavioral.mediator" visibility="public" xPosition="75.0" yPosition="331.0">
+      <Methods>
+        <Method name="recive" returnType="void" visibility="package">
+          <Argument type="String" name="message"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Mediator" package="com.epam.com.patternsproject.behavioral.mediator" visibility="public" xPosition="418.0" yPosition="331.0">
+      <Methods>
+        <Method name="send" returnType="void" visibility="package">
+          <Argument type="String" name="message"/>
+          <Argument type="Colleague" name="colleagueSender"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.mediator.Helicopter" target="com.epam.com.patternsproject.behavioral.mediator.Colleague"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.mediator.Boing" target="com.epam.com.patternsproject.behavioral.mediator.Colleague"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.mediator.ControlTower" target="com.epam.com.patternsproject.behavioral.mediator.Mediator"/>
+    <HasRelation name="colleagueList" source="com.epam.com.patternsproject.behavioral.mediator.ControlTower" target="com.epam.com.patternsproject.behavioral.mediator.Colleague" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Colleague&gt;"/>
+    <UseRelation source="com.epam.com.patternsproject.behavioral.mediator.Mediator" target="com.epam.com.patternsproject.behavioral.mediator.Colleague" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.epam.com.patternsproject.behavioral.mediator.ControlTower" target="com.epam.com.patternsproject.behavioral.mediator.Colleague" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

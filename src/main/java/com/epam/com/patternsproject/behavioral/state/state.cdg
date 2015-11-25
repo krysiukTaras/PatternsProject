@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="main.java.com.epam.com.patternsproject.behavioral.state">
+  <ClassDiagramComponents>
+    <Class name="HappyState" package="com.epam.com.patternsproject.behavioral.state" visibility="public" xPosition="236.0" yPosition="250.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sayGoodbye" returnType="String" visibility="public"/>
+        <Method name="sayHello" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Person" package="com.epam.com.patternsproject.behavioral.state" visibility="public" xPosition="504.0" yPosition="510.0">
+      <Fields>
+        <Field name="emotionalState" type="EmotionalState" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EmotionalState" name="emotionalState"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="setEmotionalState" returnType="void" visibility="public">
+          <Argument type="EmotionalState" name="emotionalState"/>
+        </Method>
+        <Method name="sayGoodbye" returnType="String" visibility="public"/>
+        <Method name="sayHello" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SadState" package="com.epam.com.patternsproject.behavioral.state" visibility="public" xPosition="984.0" yPosition="245.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="sayGoodbye" returnType="String" visibility="public"/>
+        <Method name="sayHello" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="EmotionalState" package="com.epam.com.patternsproject.behavioral.state" visibility="public" xPosition="594.0" yPosition="250.0">
+      <Methods>
+        <Method name="sayHello" returnType="String" visibility="public"/>
+        <Method name="sayGoodbye" returnType="String" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="emotionalState" source="com.epam.com.patternsproject.behavioral.state.Person" target="com.epam.com.patternsproject.behavioral.state.EmotionalState" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.state.Person" target="com.epam.com.patternsproject.behavioral.state.EmotionalState"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.state.SadState" target="com.epam.com.patternsproject.behavioral.state.EmotionalState"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="com.epam.com.patternsproject.behavioral.state.HappyState" target="com.epam.com.patternsproject.behavioral.state.EmotionalState"/>
+    <UseRelation source="com.epam.com.patternsproject.behavioral.state.Person" target="com.epam.com.patternsproject.behavioral.state.EmotionalState" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

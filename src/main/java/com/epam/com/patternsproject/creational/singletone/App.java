@@ -10,6 +10,8 @@ public class App {
         processor.countSum(10);
         simpleSingleton.log("work finished");
 
+        SimpleSingleton s2 = SimpleSingleton.getInstance();
+        s2.log("dasdasd");
     }
 
 }
